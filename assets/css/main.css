@@ -10,11 +10,14 @@ header {
   position: fixed;
   z-index: 2;
   background-color: transparent;
+  background: rgba(138, 144, 255, 0.9);
   height: auto;
 }
 header nav {
   width: 85%;
   margin: auto;
+  background-color: transparent;
+  transition: background-color 0.3s ease-in-out;
 }
 header nav .collapseDiv {
   justify-content: end;
@@ -33,7 +36,7 @@ main #ourBestrobotics {
   align-items: center;
   width: 100%;
   min-height: 700px;
-  background-image: url(/assets/scss/images/banner-bg.jpg);
+  background-image: url(/assets/images/banner-bg.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -92,7 +95,7 @@ main #Showsection .card #btn:hover {
   background-color: #A992FF;
 }
 main #Professionalsection {
-  background-image: url(/assets/scss/images/feature-bg.jpg);
+  background-image: url(/assets/images/feature-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -163,10 +166,40 @@ main #blogSection .btn {
   background-color: #A992FF;
   border: none;
   color: white;
+  border-radius: 0;
+  margin: 10px 0px;
 }
 main #blogSection .btn:hover {
   background-color: white;
   color: black;
+}
+
+#globllyConnect {
+  width: 100%;
+  height: 643px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#globllyConnect .row {
+  margin: 0;
+  padding: 0;
+}
+#globllyConnect .row .robot {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+#globllyConnect .row .robot img {
+  width: 100%;
+  height: 100%;
+}
+#globllyConnect .row .globllyConnectTxt {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 footer {
@@ -175,7 +208,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url(/assets/scss/images/footer-bg.jpg);
+  background-image: url(/assets/images/footer-bg.jpg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

@@ -28,7 +28,10 @@ header {
 
         .dropdown:hover {
             .dropdown-menu {
+                margin-top: 6px;
                 display: block;
+                border-radius: 0px;
+
             }
         }
     }
@@ -40,7 +43,7 @@ main {
 
     display: flex;
     flex-direction: column;
-    gap: 150px;
+    gap: 80px;
 
     #ourBestrobotics {
         display: flex;
@@ -51,6 +54,12 @@ main {
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+
+        .image {
+            img {
+                width: 100%;
+            }
+        }
 
         .text {
             h1 {
@@ -65,10 +74,16 @@ main {
             }
 
             #btn {
-                border: 0;
+                border: 1px solid white;
                 background-color: white;
                 color: black;
-                padding: 10px 15px;
+                padding: 10px 20px;
+
+                &:hover {
+                    background-color: transparent;
+                    color: white;
+                }
+
 
             }
         }
@@ -94,6 +109,19 @@ main {
             border: none;
             min-height: 181px;
             padding-top: 20px;
+            cursor: pointer;
+            background-color: #F9F9FF;
+            padding: 10px;
+            border-radius: 10px;
+
+
+            &:hover {
+                #btn {
+                    background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+                    color: white;
+                }
+
+            }
 
             .images {
                 max-width: 100%;
@@ -104,6 +132,7 @@ main {
             h1 {
                 font-size: 20px;
                 height: 40px;
+                margin: 20px 0px 0px;
             }
 
             p {
@@ -118,11 +147,10 @@ main {
                 color: black;
                 border: 0;
                 padding: 10px 15px;
+                margin: auto;
+                width: 70% !important;
 
-                &:hover {
-                    background-color: #A992FF;
 
-                }
             }
         }
     }
@@ -175,13 +203,24 @@ main {
                 min-height: 180px;
                 margin-bottom: 20px;
 
+                &:hover {
+                    .text {
+                        * {
+                            transition: .3s;
+                            color: #828fff;
+                        }
+                    }
+                }
+
                 .text {
                     display: flex;
                     align-items: center;
-                    gap: 20px;
-                    margin-left: 20px;
-                    margin: 20px;
+                    gap: 10px;
+                    margin: 0px 20px;
                     padding-top: 20px;
+                    transition: .3s;
+
+
 
                     i {
                         font-size: 25px;
@@ -211,6 +250,23 @@ main {
 
     }
 
+    #bransArea {
+        .brandImage {
+            display: flex;
+            justify-content: space-between;
+
+            img {
+
+                filter: grayscale(100%);
+                transition: filter 0.3s ease-in-out;
+
+                &:hover {
+                    filter: grayscale(0%);
+                }
+            }
+        }
+    }
+
     #blogSection {
         .blog {
             display: flex;
@@ -231,24 +287,62 @@ main {
         }
 
         .btn {
-            min-height: 35px;
-            background-color: #A992FF;
+
             border: none;
             color: white;
             border-radius: 0;
             margin: 10px 0px;
+            background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
 
+            &:hover {
+                background: white;
+                color: #828fff;
+                border: 1px solid #828fff;
+            }
         }
-
-        .btn:hover {
-            background-color: white;
-            color: black;
-        }
-
 
     }
 
 
+}
+
+#video {
+    .imgdiv {
+        background: url(/assets/images/video-bg.jpg) no-repeat center;
+        background-size: cover;
+        height: 330px;
+
+        .grad {
+            background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    }
+
+    h6 {
+        color: #8a90ff;
+        font-weight: 300;
+        letter-spacing: 2px;
+        font-size: 12px;
+    }
+
+    .primary-btn {
+        background-image: linear-gradient(to right, #828fff 0%, #d496ff 100%);
+        padding: 10px 20px;
+        color: white;
+        text-decoration: none;
+
+        &:hover {
+            background: white;
+            color: #828fff;
+            border: 1px solid #828fff;
+        }
+    }
 }
 
 #globllyConnect {
@@ -275,17 +369,35 @@ main {
         }
 
         .globllyConnectTxt {
-            
+
             height: 100%;
+            width: 65%;
             display: flex;
             justify-content: center;
             flex-direction: column;
+            padding-left: 20px;
+
+            button {
+                max-width: 150px;
+                background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+                color: white;
+                border: none;
+                padding: 10px 10px;
+
+                &:hover {
+                    background: white;
+                    color: #828fff;
+                    border: 1px solid #828fff;
+                }
+            }
         }
     }
 
 }
 
 footer {
+    padding: 40px;
+    color: white !important;
     min-height: 300px;
     width: 100%;
     display: flex;
@@ -296,8 +408,40 @@ footer {
     background-position: center;
     background-size: cover;
 
+    .footerBoxes {
+        display: flex;
+        justify-content: space-between;
+
+        ul {
+            list-style: none !important;
+        }
+    }
+
     .colorlib {
         min-height: 100px;
+
+        input {
+            line-height: 38px;
+            border: none;
+            background: #fff;
+            font-weight: 300;
+            border-radius: 20px;
+            color: #777;
+            padding-left: 20px;
+            margin-right: 20px;
+            width: 65%;
+        }
+
+        button {
+            background-image: -webkit-linear-gradient(0deg, #828fff 0%, #d496ff 100%);
+            line-height: 42px;
+            border-radius: 25px;
+            border: none;
+            color: #fff;
+            font-weight: 500;
+            cursor: pointer;
+            width: 27%;
+        }
 
         p {
             color: white;
@@ -305,7 +449,62 @@ footer {
 
         i {
             color: white;
-            margin: 20px;
+            padding: 20px;
+        }
+
+        .feedİnstagram {
+            gap: 10px;
+
+            .top {
+                margin-bottom: 5px;
+            }
+        }
+
+        .social {
+            i {
+                color: white;
+                background-color: black;
+            }
+
+        }
+
+        .footerLine {
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
         }
     }
+}
+
+@media screen and (max-width: 768px) {
+    #bransArea {
+        img {
+            width: 15%;
+        }
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .globllyConnectTxt {
+        h1 {
+            width: 50%;
+            font-size: 19px;
+        }
+
+        width: 100% !important;
+    }
+
+    .footerBoxes,
+    .footerLine {
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .form {
+        button {
+            display: block;
+            margin: 10px 0px;
+        }
+    }
+
 }
